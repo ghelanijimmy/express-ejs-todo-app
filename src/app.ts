@@ -1,6 +1,7 @@
 import express, { Express, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
+import { getDate } from './utils/date';
 
 const app: Express = express();
 
@@ -14,15 +15,7 @@ const items: string[] = ['Buy Food', 'Cook Food', 'Eat Food'];
 const workItems: string[] = [];
 
 app.get('/', (req: Request, res: Response) => {
-  const today = new Date();
-  const options: Intl.DateTimeFormatOptions = {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-  };
-  const day = today.toLocaleDateString('en-US', options);
-
-  res.render('list', { listTitle: day, items });
+  res.render('list', { listTitle: getDate(), items });
 });
 
 app.post('/', (req: Request<{ newItem: string }>, res: Response) => {
