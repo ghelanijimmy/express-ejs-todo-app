@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="todolistDB@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.48">
+    <root id="1">
+      <ServerVersion>6.0.6</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="config"/>
+    <schema id="4" parent="1" name="fruitsDB"/>
+    <schema id="5" parent="1" name="local"/>
+    <schema id="6" parent="1" name="personDB"/>
+    <schema id="7" parent="1" name="shopDB"/>
+    <schema id="8" parent="1" name="todolistDB">
+      <Current>1</Current>
+    </schema>
+    <table id="9" parent="8" name="items"/>
+    <column id="10" parent="9" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="11" parent="9" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="12" parent="9" name="name">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+  </database-model>
+</dataSource>
