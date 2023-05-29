@@ -14,17 +14,42 @@
       <Current>1</Current>
     </schema>
     <table id="9" parent="8" name="items"/>
-    <column id="10" parent="9" name="_id">
+    <table id="10" parent="8" name="lists"/>
+    <column id="11" parent="9" name="_id">
       <DasType>ObjectId|12s</DasType>
       <Position>1</Position>
     </column>
-    <column id="11" parent="9" name="__v">
+    <column id="12" parent="9" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="13" parent="9" name="name">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="14" parent="10" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="15" parent="10" name="items">
+      <DasType>list|4999545s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="16" parent="10" name="__v">
       <DasType>Int32|4s</DasType>
       <Position>2</Position>
     </column>
-    <column id="12" parent="9" name="name">
+    <column id="17" parent="10" name="items._id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="18" parent="10" name="items.name">
       <DasType>String|12s</DasType>
       <Position>3</Position>
+    </column>
+    <column id="19" parent="10" name="name">
+      <DasType>String|12s</DasType>
+      <Position>4</Position>
     </column>
   </database-model>
 </dataSource>
